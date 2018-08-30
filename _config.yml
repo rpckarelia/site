@@ -1,1 +1,11 @@
 title: Республиканский Перинатальный Центр
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

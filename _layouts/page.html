@@ -2,9 +2,15 @@
 layout: default
 ---
 {% comment %}
-  Базовый шаблон. Используется всеми страницами сайта.
+    A general page layout. Used by default for all content on the site.
 {% endcomment %}
 
-<div class="container">
-  {{ content }}
+{% include breadcrumbs.html class="content-narrow" %}
+
+<div class="container pure-g">
+    <div class="pure-u-1">
+        <div class="content content-narrow">
+            {{ content }}
+        </div>
+    </div>
 </div>

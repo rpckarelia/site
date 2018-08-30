@@ -1,6 +1,6 @@
 ---
-title: Hello
-layout: default
----
+title: Index
+layout: basic
 
+---
 Hello!

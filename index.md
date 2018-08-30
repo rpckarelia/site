@@ -1,5 +1,5 @@
 ---
-title: Index
+title: Главная
 layout: default
 
 ---

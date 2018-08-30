@@ -1,6 +1,6 @@
 ---
 title: Index
-layout: post
+layout: default
 
 ---
 Hello from forestry.io!

@@ -1,5 +1,7 @@
 title: Республиканский Перинатальный Центр
 description: Сайт Перинатального Центра г. Петрозаводска
+baseurl:
+permalink: "/:path/"
 defaults:
   - scope:
       path: ""
@@ -10,3 +12,6 @@ defaults:
       type: posts
     values:
       layout: post
+collections:
+  posts:
+    output: true

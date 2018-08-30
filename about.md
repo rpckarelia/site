@@ -1,5 +1,5 @@
 ---
-title: About
+title: О сайте
 layout: default
 menu:
   footer:
@@ -8,6 +8,6 @@ menu:
   navigation:
     identifier: _about
     weight: 2
----
 
+---
 Привет, мир! Как дела?

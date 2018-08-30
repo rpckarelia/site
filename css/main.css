@@ -1,0 +1,18 @@
+body {
+  margin: 0px;
+}
+
+body > header {
+  background-color: lightgrey;
+  padding: 1rem;
+  border-bottom: 1px solid grey;
+}
+
+body > div.content {
+  padding: 1rem;
+}
+
+div.container {
+  margin: 0px auto;
+  max-width: 920px;
+}

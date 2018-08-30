@@ -3,4 +3,4 @@ title: Index
 layout: basic
 
 ---
-Hello!
+Hello from forestry.io!

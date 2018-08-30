@@ -1,0 +1,26 @@
+---
+label: default
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  label: Title
+  name: title
+  config:
+    required: true
+- type: textarea
+  label: Description
+  name: description
+  description: Краткое описание страницы
+  config:
+    required: true
+- type: datetime
+  label: Publish date
+  name: publish_date
+  config:
+    required: true
+- type: text
+  label: layout
+  name: layout
+  hidden: true
+  default: post

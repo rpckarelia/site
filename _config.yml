@@ -15,3 +15,10 @@ defaults:
 collections:
   posts:
     output: true
+jekyll-archives:
+  enabled: all
+  layout: "archive"
+gems:
+  - jekyll-menus
+  - jekyll-feed
+  - jekyll-archives

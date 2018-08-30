@@ -1,10 +1,8 @@
 ---
 title: Главная
 layout: default
-
+menu:
+  navigation:
+    identifier: _index
+    weight: 1
 ---
-Hello from forestry.io 11!
-
-Some text from forestry
-
-Привет мир! Как у вас дела?

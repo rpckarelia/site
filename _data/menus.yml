@@ -3,3 +3,12 @@ navigation:
 - url: http://reg.zdrav10.ru
   weight: 1
   title: Запись к врачу
+
+- url: introduction.html
+  title: Introduction
+
+- url: configuration.html
+  title: Configuration
+
+- url: deployment.html
+  title: Deployment

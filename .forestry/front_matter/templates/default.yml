@@ -24,3 +24,5 @@ fields:
   name: layout
   hidden: true
   default: post
+pages:
+- _posts/test.md

@@ -1,0 +1,28 @@
+{% include header.html %}
+
+<div class="is-container">
+  <div><h1>{{ page.title }}</h1></div>
+  <div class="is-push-right"><a href="/news/archive">Архив новостей</a></div>
+</div>
+
+{% assign posts = paginator.posts %}
+{% for post in posts %}
+  {% include item.html %}
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+<nav class="pager">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="is-prev">Вперед</a>
+  {% else %}
+    <a href="{{ paginator.previous_page_path }}" class="is-prev is-disabled">Вперед</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="is-next">Назад</a>
+  {% else %}
+    <a href="{{ paginator.next_page_path }}" class="is-next is-disabled">Назад</a>
+  {% endif %}
+</nav>
+{% endif %}
+
+{% include footer.html %}

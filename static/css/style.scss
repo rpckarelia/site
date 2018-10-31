@@ -1,0 +1,167 @@
+---
+---
+
+@import "font";
+@import "vars";
+@import "mixins";
+@import "modules";
+
+[container] {
+	margin: 0px auto;
+	max-width: $width-large;
+}
+
+a {
+	color: $color-black;
+	text-decoration: none;
+
+	&:hover {
+		color: $color-orange;
+		border-bottom: 1px solid rgba($color-orange, 0.3);
+	}
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight: normal;
+}
+
+body > header {
+	margin: 1.875rem 0rem;
+
+	h1, h2 {
+		font-size: 100%;
+		text-transform: uppercase;
+		position: relative;
+		left: -3rem;
+		margin-top: 0;
+	}
+
+	.logo {
+		width: 3rem;
+		height: 3rem;
+		/*background-color: rgba($color-orange, 0.3);*/
+		float: left;
+		position: relative;
+		left: -4rem;
+		top: -.3rem;
+		/*border-radius: 50%;*/
+		/*border: 2px solid rgba($color-orange, 0.1);*/
+	}
+}
+
+body > nav {
+
+	&.is-fixed {
+		width: 100%;
+	}
+
+	background-color: $color-blue;
+
+	h1, h2, h3, h4, h5 {
+		color: $color-inverted;
+	}
+
+	a, .caret {
+		color: $color-inverted;
+	}
+
+	a {
+		line-height: 1.875rem;
+		display: inline-block;
+
+		&:hover {
+			color: $color-inverted;
+			border-bottom: none;
+
+		}
+	}
+
+	> div > ul {
+		> li {
+			display: inline-block;
+			text-transform: uppercase;
+			font-size: small;
+			/*margin: 0 0.875rem;*/
+
+			&.selected {
+				background-color: rgba($color-black, 0.1);
+			}
+
+			&:hover {
+				cursor: pointer;
+				background-color: rgba($color-black, 0.3);
+			}
+
+			> a {
+				margin: 0.5rem;
+			}
+
+			> div.section {
+				display: none;
+				position: absolute;
+				width: 100%;
+				left: 0;
+				background-color: $color-blue;
+			}
+
+			&.open {
+				> div.section {
+					display: block;
+					padding: 1rem 0;
+					background-color: $color-blue;
+
+					[container] > dl {
+						width: 33%;
+						float: left;
+						margin-left: 0.5rem;
+						
+						dt {
+							color: $color-inverted;
+						}
+
+						h4 {
+							padding-bottom: 0.5rem;
+						}
+
+						a:hover {
+							color: $color-inverted;
+							/*border-bottom: 1px solid rgba($color-inverted, 0.6);*/
+							text-decoration: underline;
+						}
+
+						ul {
+							margin-left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+	background-color: $color-blue;
+	color: $color-inverted;
+
+	[container] {
+		padding: 1.875rem 0rem;
+	}
+}
+
+div.content {
+	margin: 1.875rem 0rem;
+
+	h1 {font-size: 150%;}
+	h2 {font-size: 140%;}
+	h3 {font-size: 130%;}
+	h4 {font-size: 120%;}
+	h5, h6, h7, h8 {font-size: 100%;}
+
+	article {
+		margin-top: 1rem;
+	}
+}
+
+.is-shadow-1 {
+	padding: 1rem;
+}

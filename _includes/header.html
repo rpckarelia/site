@@ -1,19 +1,60 @@
-<!doctype html>
-<html class="no-js" lang="ru">
+{% assign url = page.url | remove: '.html' %}
+{% assign breadcrumbs = url | remove_first: "/" | split: "/" %}
+{% assign parent = breadcrumbs.first | prepend: "/" %}
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{{ page.title }} - {{ site.title }}</title>
-  <meta name="description" content="{% if .page.description %}{{ .page.description }}{% else %}{{ .site.description }}{% endif %}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | absolute_url }}"/>
-  <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css">
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-  <!--<![endif]-->
-  <link rel="stylesheet" href="{{ "/css/main.css" | absolute_url }}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ page.title }} - {{ site.data.information.title | replace: "<br/>", " " }}</title>
+
+	<link rel="icon" type="image/png" href="/favicon.png" >
+	<link rel="alternate" hreflang="ru" type="application/rss+xml" title="" href="/feed.xml">
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	<link rel="stylesheet" href="/static/css/plyr.css">
+
+	<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="/static/js/turbolinks.js"></script> -->
+	<script type="text/javascript" src="/static/js/plyr.polyfilled.js"></script>
 </head>
 <body>
+	<header>
+		<div container>
+			<div class="is-row">
+				<div class="is-col is-70">
+					<a href="/" title="{{ site.data.information.description }}">
+						<div class="logo"><img src="/static/logo.png"></div>
+						{% if page.url == "/" %}
+						<h1>{{ site.data.information.title }}</h1>
+						{% else %}
+						<h2>{{ site.data.information.title }}</h2>
+						{% endif %}
+					</a>
+				</div>
+				<div class="is-col">
+					<div><a href="#">Версия для слабовидящих</a></div>
+					<div>{{ site.data.information.phones[0].display }}, {{ site.data.information.email }}</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<nav id="cbp-hrmenu" data-kube="sticky">
+		<div container>
+			<ul>{% for item in site.data.menu.main %}
+				<li class="{%if item.children %} has-child {% endif %} {%if item.url == parent %} selected {% endif %}">
+					<a href="{{ item.url }}">{{ item.title }}{% if item.children %} <span class="caret is-down"></span>{% endif %}</a>{% if item.children %}
+					<div class="section">
+						<div container>{% for child in item.children %}
+							<dl>
+								<dt>{{ child.title }}</dt>
+								{% for child in child.children %}
+									<dd><a href="{{ child.url }}">{{ child.title }}</a></dd>{% endfor %}
+							</dl>{% endfor %}
+						</div>
+					</div>{% endif %}
+				</li>{% endfor %}
+			</ul>
+		</div>
+	</nav>
+	<div container>
+		<div class="content">

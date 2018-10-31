@@ -1,5 +1,8 @@
 ---
 title: Главная
-layout: default
-
+layout: main
+shownews: true
+news: 4
+showlinks: true
 ---
+

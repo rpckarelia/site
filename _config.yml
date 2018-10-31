@@ -1,24 +1,48 @@
-title: Республиканский Перинатальный Центр
-description: Сайт Перинатального Центра г. Петрозаводска
-baseurl:
-permalink: "/:path/"
 defaults:
-  - scope:
-      path: ""
-    values:
-      layout: page
   - scope:
       path: ""
       type: posts
     values:
       layout: post
+  - scope:
+      path: ""
+      type: people
+    values:
+      layout: person
 collections:
+  structure:
+    output: true
   posts:
     output: true
-jekyll-archives:
-  enabled: all
-  layout: "archive"
-gems:
-  - jekyll-menus
+  people:
+    output: true
+
+excerpt_separator: <!--more-->
+
+paginate: 5
+paginate_path: "/news/page:num/"
+permalink: "/news/:year/:month/:day/:title.html"
+
+author: rpc
+
+plugins:
+  - jekyll-paginate
+  - jekyll-redirect-from
   - jekyll-feed
-  - jekyll-archives
+  - jekyll-sitemap
+
+sass:
+  style: compact
+
+# https://tech.yandex.ru/speechkit/cloud/doc/guide/common/speechkit-common-tts-http-request-docpage/
+yandex:
+  speechkit:
+    id: 8e7ac46b-c6aa-45e1-951d-b38035884660
+    format: mp3
+    quality: lo
+    lang: ru-RU
+    speaker: omazh
+    emotion: good
+
+
+

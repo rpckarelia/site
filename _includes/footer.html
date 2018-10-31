@@ -1,2 +1,51 @@
+{% assign siteinfo = site.data.information %}
+	</div>
+</div>
+<footer>
+	<div container>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+</footer>
+</div>
+<!-- <footer>
+	<div container>
+		<div class="is-row">
+			<div class="is-col">
+				<h2>Полезные ссылки</h2>
+				<ul>{% for link in site.data.menu.footer %}
+					<li><a href="{{ link.url }}">{{ link.title }}</a></li>{% endfor %}
+				</ul>
+			</div>
+			<div class="is-col">
+				<h2>Телефоны</h2>
+				<ul>{% for phone in siteinfo.phones %}
+					<li>
+						<a href="tel:{{ phone.href }}">{{ phone.display }}</a> &ndash; {{ phone.description }}
+					</li>{% endfor %}
+				</ul>
+			</div>
+			<div class="is-col">
+				<h2>Контактная информация</h2>
+				<ul>
+					<li>Адрес: {{ siteinfo.index }}, {{ siteinfo.state }}, {{ siteinfo.city }}, {{ siteinfo.address }}</li>
+				</ul>
+			</div>
+		</div>
+		<p>&copy; {{ 'now' | date: "%Y" }}. {{ siteinfo.description }}</p>
+	</div>
+</footer> -->
+<script type="text/javascript" src="/static/js/cbpHorizontalMenu.min.js"></script>
+<script>
+	$(function() {
+		cbpHorizontalMenu.init();
+	});
+</script>
+<script type="text/javascript" src="/static/js/kube.min.js"></script>
+<script>$K.init();</script>
 </body>
 </html>

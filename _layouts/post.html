@@ -1,0 +1,42 @@
+{% assign speechkit = site.yandex.speechkit %}
+{% include header.html %}
+<h1>{{ page.title }}</h1>
+{{ content }}
+<p>Дата публикации: <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | russianDate }}</time></p>
+<audio id="player" controls><source src="" type="audio/mp3"></audio>
+
+<script>
+	$(function() {
+		const player = new Plyr('audio', {});
+
+		let text = "";
+		$("div.page div.content p").each(function() { text = text + " " + $(this).text(); });
+
+		const chunks = text.match(/.{1,1000}/g);
+		const count = chunks.length;
+		let current = 0;
+
+		setChunkToPlay(current);
+
+		player.on("ended", event => {
+			const player = event.detail.plyr;
+
+			current += 1;
+			if (current < count) {
+				setChunkToPlay(current);
+				player.play();
+			}
+		});
+
+		function setChunkToPlay(chunk) {
+			player.source = {
+				type: "audio"
+				,sources: [{
+					src: "https://tts.voicetech.yandex.net/generate?key={{ speechkit.id }}&format={{ speechkit.format }}&lang={{ speechkit.lang }}&speaker={{ speechkit.speaker }}&emotion={{ speechkit.emotion }}&text=" + encodeURI(chunks[chunk])
+					,type: "audio/{{ speechkit.format }}"
+					}]
+			};
+		}
+	})
+</script>
+{% include footer.html %}

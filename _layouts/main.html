@@ -1,0 +1,23 @@
+{% include header.html %}
+
+{% if page.shownews %}
+	<h2>Последние новости</h2>
+	<div class="is-row is-bricks is-col-stack-24">{% for post in site.posts limit:4 %}
+		<div class="is-col is-50 is-shadow-1">
+			<h3>{{ post.title }}</h3>
+			<p>{{ post.content | truncatewords: 20 }}</p>
+			<a href="{{ post.url | absolute_url }}" title="{{ post.title }}">
+				<div class="is-container">
+					<div><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | russianDate }}</time></div>
+					<div class="is-push-right">Подробнее »</div>
+				</div>
+			</a>
+		</div>{% endfor %}
+	</div>
+{% endif %}
+
+{% if page.showlinks %}
+	<h2>Полезные сервисы</h2>
+{% endif %}
+
+{% include footer.html %}

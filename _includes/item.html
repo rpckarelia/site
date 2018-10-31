@@ -1,0 +1,10 @@
+<article class="is-shadow-1">
+	<h3><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h3>
+	{{ post.excerpt }}
+	<a href="{{ post.url | absolute_url }}" title="{{ post.title }}">
+		<div class="is-container">
+			<div><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | russianDate }}</time></div>
+			<div class="is-push-right">Подробнее »</div>
+		</div>
+	</a>
+</article>

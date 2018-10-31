@@ -1,0 +1,18 @@
+{% comment %}
+	Шаблон отображения отдела
+	в переменную division получаем название отдела из url:
+	/structure/afo -> afo
+	и среди сотрудников ищем тех, кто относится к этому отделу
+{% endcomment %}
+
+{% assign division = page.url | split: "/" | last %}
+{% assign people = site.people | where: "division", division %}
+
+{% include header.html %}
+{{ content }}
+
+<h3>Сотрудники</h3>
+<ul>{% for person in people %}
+	<li>{{ person.title }}</li>{% endfor %}
+</ul>
+{% include footer.html %}

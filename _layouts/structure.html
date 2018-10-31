@@ -1,0 +1,9 @@
+{% include header.html %}
+
+{{ content }}
+
+<h2>Отделения</h2>
+<ul>{% for item in site.structure %}
+	<li><a href="{{ item.url | remove: ".html" }}">{{ item.title }}</a></li>{% endfor %}
+</ul>
+{% include footer.html %}

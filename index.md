@@ -6,3 +6,4 @@ news: 4
 showlinks: false
 ---
 
+lorem

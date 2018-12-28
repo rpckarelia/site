@@ -38,3 +38,5 @@ fields:
   name: important
   label: Важность
   description: Важная новость
+pages:
+- проверочная-новость.md

@@ -40,3 +40,4 @@ fields:
   description: Важная новость
 pages:
 - проверочная-новость.md
+- _posts/test.md

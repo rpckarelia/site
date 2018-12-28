@@ -7,7 +7,7 @@ sections:
 - type: directory
   path: _posts
   label: Posts
-  create: all
+  create: documents
   match: "**/*"
   templates:
   - b3873f39-697e-492f-9ce6-64a7b24a0849

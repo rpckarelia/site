@@ -5,6 +5,13 @@ admin_path: "/mngr"
 webhook_url: 
 sections:
 - type: directory
+  path: _posts
+  label: Posts
+  create: all
+  match: "**/*"
+  templates:
+  - b3873f39-697e-492f-9ce6-64a7b24a0849
+- type: directory
   path: _people
   label: People
   create: all
@@ -19,11 +26,6 @@ sections:
   create: all
   templates:
   - posts
-- type: jekyll-posts
-  label: Posts
-  create: all
-  templates:
-  - default
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''

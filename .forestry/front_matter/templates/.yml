@@ -38,6 +38,11 @@ fields:
   name: important
   label: Важность
   description: Важная новость
+- type: file
+  name: banner_image
+  label: Обложка
+  config:
+    maxSize: '4'
 pages:
 - проверочная-новость.md
 - _posts/test.md

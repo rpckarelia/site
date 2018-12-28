@@ -1,0 +1,40 @@
+---
+label: Новость
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: Заголовок
+  name: title
+  config:
+    required: true
+- type: text
+  name: sub_heading
+  label: Подзаголовок
+- type: datetime
+  name: date
+  label: Дата
+  config:
+    display_utc: true
+    required: true
+  hidden: false
+- type: tag_list
+  name: tags
+  label: Теги
+- type: select
+  name: categories
+  config:
+    source:
+      type: simple
+    required: false
+    options:
+    - docs
+  label: Категория
+- type: boolean
+  name: pinned
+  label: Прикреплено
+  description: Новость прикреплена
+- type: boolean
+  name: important
+  label: Важность
+  description: Важная новость

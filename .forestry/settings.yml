@@ -22,7 +22,6 @@ sections:
 - type: jekyll-posts
   label: Posts
   create: all
-  match: "**/*"
   templates:
   - default
 upload_dir: uploads

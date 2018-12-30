@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: "/mngr"
 webhook_url: 
 sections:
+- type: document
+  path: _data/information.yml
+  label: Информация
+  match: "**/*"
 - type: directory
   path: _posts
   label: Posts

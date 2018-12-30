@@ -4,9 +4,6 @@ auto_deploy: false
 admin_path: "/mngr"
 webhook_url: 
 sections:
-- type: document
-  path: _data/information.yml
-  label: Information
 - type: directory
   path: _posts
   label: Posts
@@ -29,6 +26,9 @@ sections:
   create: all
   templates:
   - posts
+- type: document
+  path: _data/information.yml
+  label: Information
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''

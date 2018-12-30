@@ -43,8 +43,3 @@ fields:
   label: Обложка
   config:
     maxSize: '4'
-pages:
-- проверочная-новость.md
-- _posts/test.md
-- _posts/лицензия-на-деятельность.md
-- _posts/открытие.md

@@ -45,7 +45,7 @@ layout: default
 
 ### Документы
 
-* [FilePath_152.pdf](https://app.forestry.io/sites/r2t51umv5qnraq/body-media//uploads/FilePath_152.pdf "FilePath_152.pdf")
+* [Ежемесячные выплаты в связи с рождением (усыновлением) первого ребёнка с 1 января 2018 года](/uploads/FilePath_152.pdf "Ежемесячные выплаты в связи с рождением (усыновлением) первого ребёнка с 1 января 2018 года")
 * [FilePath_85.pdf](/uploads/FilePath_85.pdf "FilePath_85.pdf")
 * [FilePath_162.pdf](/uploads/FilePath_162.pdf "FilePath_162.pdf")
 * [FilePath_39.pdf](/uploads/FilePath_39.pdf "FilePath_39.pdf")

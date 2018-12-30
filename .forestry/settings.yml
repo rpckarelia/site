@@ -6,8 +6,7 @@ webhook_url:
 sections:
 - type: document
   path: _data/information.yml
-  label: Информация
-  match: "**/*"
+  label: Information
 - type: directory
   path: _posts
   label: Posts

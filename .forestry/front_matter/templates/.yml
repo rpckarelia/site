@@ -43,3 +43,5 @@ fields:
   label: Обложка
   config:
     maxSize: '4'
+pages:
+- _posts/документы-для-пациентов.md

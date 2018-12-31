@@ -10,6 +10,7 @@ sections:
   create: documents
   match: "**/*"
   templates:
+  - test
   - b3873f39-697e-492f-9ce6-64a7b24a0849
 - type: directory
   path: _people

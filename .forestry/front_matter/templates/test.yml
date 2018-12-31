@@ -6,3 +6,5 @@ fields:
 - type: text
   name: labellll
   label: labellll
+pages:
+- _posts/esesf.md

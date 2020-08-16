@@ -1,16 +1,16 @@
 ---
 title: ГБУЗ<br/>«Республиканский Перинатальный Центр»
 description: Официальный сайт Республиканского перинатального центра в г. Петрозаводск
-index: 185000
+index: "185000"
 address: ул. Сыктывкарская, д.&nbsp;9
 country: Россия
 state: Республика Карелия
 city: Петрозаводск
-email: rpz@onego.ru
+email: rpc@zdrav10.ru
 phones:
-- href: 88142333111
+- href: "88142333111"
   display: 8 (8142) 333 111
   description: Приемная
-- href: 88142333112
+- href: "88142333112"
   display: 333 112
   description: Старшая медсестра
